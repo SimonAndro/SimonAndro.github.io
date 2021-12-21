@@ -6,7 +6,7 @@
 # --- Required options --- #
 
 # Name of website
-title: My Website
+title: Hello Simon!
 
 # Your name to show in the footer
 author: Nakibinge Simon
@@ -16,8 +16,8 @@ author: Nakibinge Simon
 navbar-links:
   About Me: "aboutme"
   Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
+    - Github: "https://github.com/SimonAndro"
+    # - Learn markdown: "https://www.markdowntutorial.com/"
   Author's home: "https://simonandro.github.io/"
 
 # --- Logo --- #
@@ -79,7 +79,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "MyWebsite.com"
+url-pretty: "Hello Simon!"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
 excerpt_length: 50
