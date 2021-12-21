@@ -12,10 +12,10 @@ One of the biggest challenges faced in deep learning is the need for alot of dat
 
 ## What is K-folds cross validation?
 
-The data is divided into k(usually chosen to be 5 or 10) equal parts
-one part is held out as a test set and the remain k-1 parts are used as the training set.
-A number of interations equal to the number of folds is used to ensure that in each iteration a new test set is picked from the traininf set used and the previous test set is added back to the training set.
-The resulting average performance is better than the performance of the individual models.
+- The data is divided into k(usually chosen to be 5 or 10) equal parts
+- one part is held out as a test set and the remain k-1 parts are used as the training set.
+- A number of interations equal to the number of folds is used to ensure that in each iteration a new test set is picked from the traininf set used and the previous test set is added back to the training set.
+- The resulting average performance is better than the performance of the individual models.
 
 ## What isn't K-folds cross validation?
 
