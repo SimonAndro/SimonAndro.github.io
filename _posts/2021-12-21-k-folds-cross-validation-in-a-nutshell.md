@@ -1,7 +1,7 @@
 ---
 layout: post
 title: K-folds Cross Validation in a nutshell
-subtitle: What it and what it isn't 
+subtitle: What it is and what it isn't 
 gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]
 tags: [machine learning, validation, deep learning]
