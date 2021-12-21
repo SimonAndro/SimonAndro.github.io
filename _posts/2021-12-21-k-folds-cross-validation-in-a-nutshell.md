@@ -8,7 +8,7 @@ tags: [machine learning, validation, deep learning]
 comments: true
 ---
 
-One of the biggest challenges facing deep learning is the need for alot of data to allow the model to learn and be able to generalize on unseen data. Incase there isn't enough data to train and test the model, one of the techniques that can be employed is K-folds cross validation.
+One of the biggest challenges faced in deep learning is the need for alot of data to allow the model to learn and be able to generalize on unseen data. Incase there isn't enough data to train and test the model, one of the techniques that can be employed is K-folds cross validation.
 
 ## What is K-folds cross validation?
 
