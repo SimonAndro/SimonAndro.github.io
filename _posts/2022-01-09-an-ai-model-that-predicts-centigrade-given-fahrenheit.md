@@ -6,7 +6,7 @@ cover-img: /assets/img/path.jpg
 thumbnail-img: /assets/img/thumb.png
 share-img: /assets/img/path.jpg
 gh-repo: simonandro/predict-centigrade-given-fahrenheit
-tags: [building a model, training a model, keras, machine learning, deep learning, temparature conversion]
+tags: [AI model, model training, keras, machine learning, deep learning, temparature conversion]
 ---
 
   In this article, we will be building a dumy AI model that learns the temperature conversion formular from data values generated using the actual formular.
@@ -16,9 +16,11 @@ tags: [building a model, training a model, keras, machine learning, deep learnin
 
 ### Background
     The temperature conversion formular form Degrees Fahrenheit to Degrees Centigrade is given below in python:
+
     ```
     centigrade = (fahrenheit - 32)*(5/9)
     ```
+
     Given some data values generated using the above formular, we want to train a simple AI model to learn the formular and be able to predict temperature in Centigrade given unseen values of temperature in Fahrenheit.
 
 ### Implementation in Python and Kera
@@ -41,7 +43,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 {% endhighlight %}
 
-We the go ahead to generate a dumy dataset using the temperature conversion formular
+We then go ahead to generate a dumy dataset using the temperature conversion formular
 {% highlight python linenos %}
 #
 # create  a dumy dataset
@@ -59,8 +61,12 @@ x_test = np.random.uniform(101,200,(int(sample_size*test_size),1)) # generate ra
 y_test = np.array([(fahrenheit - 32)*(5/9) for fahrenheit in x_test]) # calculate corresponding Centigrade values
 {% endhighlight %}
 
-Note how we specify different value  ranges for the train and test set using the uniform function in the random package of numpy, what the parameters means is shown below:
-``` np.random.uniform(lower value, higher value, size) ```
+Note how we specify different value  ranges for the train and test set using the uniform function in the random package of numpy, what the parameters mean is shown below:
+
+``` 
+np.random.uniform(lower value, higher value, size) 
+```
+
 The different ranges are specified so as to ensure we don't leak test values into the train data set.
 
 We go ahead to build the model, specifying the layers and the number of units :
@@ -85,7 +91,7 @@ def build_model():
 ### Explanation of the model
 The model is made of 3 densely connected neural network layers stacked together sequentially.
 The number of units in each layer has been chosen out of try and error, the stop condition being until when satisfying results are achieved. These units can be tweaked more to achieve better results.
-During model compilation, the chosen loss function is mean squared error since we want to know how far the model is diverging from the actual values we want to predict. We also chose to monitor the mean absolute error in the errors, for a similar reason as with the mean squared error.
+During model compilation, the chosen loss function is mean squared error since we want to know how far the model is diverging from the actual values we want to predict. We also chose to monitor the mean absolute error in the metrics, for a similar reason as with the mean squared error.
 
 After building the model, we go ahead to fit the built model onto the training data. 
 {% highlight python linenos %}
@@ -132,7 +138,8 @@ print("MSE=%s, MAE=%s" % (eval_mse, eval_mae))
 [MSE=2506.014892578125, MAE=48.59580612182617]
 ```
 
-The Results from the training process show that the model has learnt to fit the input values to the output values by around the 10th epoch. Further training maintains the loss and the mean absoulte error values almost constant. By this point, we shall make a decision of stopping the training at the 10th epoch so as to improve the model generalization on unseen data. The results of the evaulation, taking MAE as the bench mark, imply that we are off by almost 50 degrees centigrade which is quite large in actual sense.
+The Results from the training process show that the model has learnt to fit the input values to the output values by around the 10th epoch. Further training maintains the loss and the mean absoulte error values almost constant. By this point, we shall make a decision of stopping the training at the 10th epoch so as to improve the model generalization on unseen data. 
+The results of the evaulation, taking MAE as the bench mark, imply that we are off by almost 50 degrees centigrade which is quite large in actual sense.
 
 Training the model again with an epoch count of 10, the new results from the model evalaution are shown below:
 ```
@@ -159,7 +166,7 @@ plt.legend()
 plt.show()
 {% endhighlight %}
 
-The results of the plot are of predicted values and the expected values are shown below:
+The results of the plot of predicted values and the expected values are shown below:
 
 ![Model Training visualization](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg){: .mx-auto.d-block :}
 
