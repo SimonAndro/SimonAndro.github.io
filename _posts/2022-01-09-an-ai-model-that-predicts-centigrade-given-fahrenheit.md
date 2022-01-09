@@ -11,6 +11,8 @@ tags: [AI model, model training, keras, machine learning, deep learning, tempara
 
   In this article, we will be building a dumy AI model that learns the temperature conversion formular from data values generated using the actual formular.
 
+  The code can be found on [github](https://github.com/SimonAndro/predict-centigrade-given-fahrenheit)
+
 ### Motivation for building this dumy model:
 - To Show how a model can be built and evaluated using the keras framework
 
