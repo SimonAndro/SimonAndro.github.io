@@ -95,7 +95,7 @@ The model is made of 3 densely connected neural network layers stacked together 
 The number of units in each layer has been chosen out of try and error, the stop condition being until when satisfying results are achieved. These units can be tweaked more to achieve better results.
 During model compilation, the chosen loss function is mean squared error since we want to know how far the model is diverging from the actual values we want to predict. We also chose to monitor the mean absolute error in the metrics, for a similar reason as with the mean squared error.
 
-After building the model, we go ahead to fit the built model onto the training data. 
+After building the model, we go ahead to fit the training data onto the built model. 
 {% highlight python linenos %}
 #
 # model training
