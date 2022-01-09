@@ -14,7 +14,7 @@ tags: [AI model, model training, keras, machine learning, deep learning, tempara
   The code can be found on [github](https://github.com/SimonAndro/predict-centigrade-given-fahrenheit)
 
 ### Motivation for building this dumy model:
-- To Show how a model can be built and evaluated using the keras framework
+  To Show how a model can be built and evaluated using the keras framework
 
 ### Background
     The temperature conversion formular form Degrees Fahrenheit to Degrees Centigrade is given below in python:
