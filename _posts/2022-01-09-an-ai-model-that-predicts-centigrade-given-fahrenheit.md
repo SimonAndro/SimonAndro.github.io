@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Get the feel - Building a dumy AI model that predicts temperature in Centigrade given temperature in Fahrenheit
+title: Get the feel - Building a dummy AI model that predicts temperature in Centigrade given temperature in Fahrenheit
 subtitle: Learning the temperature conversion formular from data values
 cover-img: /assets/img/path.jpg
-thumbnail-img: /assets/img/temp-conv-dumy-ai-model/thumb.png
+thumbnail-img: /assets/img/temp-conv-dummy-ai-model/thumb.png
 share-img: /assets/img/path.jpg
 gh-repo: simonandro/predict-centigrade-given-fahrenheit
 tags: [AI model, model training, keras, machine learning, deep learning, temparature conversion]
 ---
 
-  In this article, we will be building a dumy AI model that learns the temperature conversion formular from data values generated using the actual formular.
+  In this article, we will be building a dummy AI model that learns the temperature conversion formular from data values generated using the actual formular.
 
   The code can be found on [github](https://github.com/SimonAndro/predict-centigrade-given-fahrenheit)
 
-### Motivation for building this dumy model:
+### Motivation for building this dummy model:
   To Show how a model can be built and evaluated using the keras framework
 
 ### Background
@@ -30,7 +30,7 @@ We shall begin by importing the necessary python modules
 
 {% highlight python linenos %}
 """
-A dumy AI model for predicting temperature in degrees centigrade
+A dummy AI model for predicting temperature in degrees centigrade
 given degrees fahrenheit 
 """
 
@@ -45,10 +45,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 {% endhighlight %}
 
-We then go ahead to generate a dumy dataset using the temperature conversion formular
+We then go ahead to generate a dummy dataset using the temperature conversion formular
 {% highlight python linenos %}
 #
-# create  a dumy dataset
+# create  a dummy dataset
 #
 #centigrade = (fahrenheit - 32)*(5/9) # conversion formula
 sample_size = 1000
