@@ -3,7 +3,7 @@ layout: post
 title: Get the feel - Building a dummy AI model that predicts temperature in Centigrade given temperature in Fahrenheit
 subtitle: Learning the temperature conversion formular from data values
 cover-img: /assets/img/path.jpg
-thumbnail-img: /assets/img/temp-conv-dummy-ai-model/thumb.png
+thumbnail-img: /assets/img/temp-conv-dumy-ai-model/thumb.png
 share-img: /assets/img/path.jpg
 gh-repo: simonandro/predict-centigrade-given-fahrenheit
 gh-badge: [star, fork, follow]
