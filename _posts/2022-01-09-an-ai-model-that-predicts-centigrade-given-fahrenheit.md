@@ -147,7 +147,7 @@ Training the model again with an epoch count of 10, the new results from the mod
 ```
 [MSE=18.294105529785156, MAE=4.252650260925293]
 ```
-This above results show that the model has improved abit from the first MAE by about 2.5 degrees centigrade.
+The above results show that the model has improved abit from the first MAE by about 2.5 degrees centigrade.
 
 Let us go ahead to generate new data values in an unseen range so as to see how well the model performs on unseen data.
 {% highlight python linenos %}
@@ -172,7 +172,8 @@ The results of the plot of predicted values and the expected values are shown be
 
 ![Model Training visualization](https://raw.githubusercontent.com/SimonAndro/predict-centigrade-given-fahrenheit/main/mae_4_predicted_actual.png){: .mx-auto.d-block :}
 
-The results in the plot above show that the model has been able to learn the temperature conversion formular to some extent, the model is able to predict centigrade values with an average absolute error of about 45 degrees centigrade.
+The results in the plot above show that the model has been able to learn the temperature conversion formular to some extent, the model is able to predict centigrade values with an average absolute error of about 4.2 degrees centigrade.
 
 ### Improvement
-Exposing the model to more data values and adjusting the number of layers and input units can help to improve on how well the model performs in predicting the values of the temperature conversion formular
+Exposing the model to more data values and adjusting the number of layers and input units can help to improve on how well the model performs in predicting the values of the temperature conversion formular.
+Normalizing the temperature values before feeding them into the model could be another way of improving the performance.
