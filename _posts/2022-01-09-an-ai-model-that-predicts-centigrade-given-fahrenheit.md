@@ -60,7 +60,7 @@ x_train = np.random.uniform(1,100,(int(sample_size*(1-test_size)),1)) # generate
 y_train = np.array([(fahrenheit - 32)*(5/9) for fahrenheit in x_train]) # calculate corresponding Centigrade values
 
 # test set
-x_test = np.random.uniform(101,200,(int(sample_size*test_size),1)) # generate random Fahrenheit values between 1 and 100
+x_test = np.random.uniform(101,200,(int(sample_size*test_size),1)) # generate random Fahrenheit values between 101 and 200
 y_test = np.array([(fahrenheit - 32)*(5/9) for fahrenheit in x_test]) # calculate corresponding Centigrade values
 {% endhighlight %}
 
@@ -93,8 +93,9 @@ def build_model():
 
 ### Explanation of the model
 The model is made of 3 densely connected neural network layers stacked together sequentially.
-The number of units in each layer has been chosen out of try and error, the stop condition being until when satisfying results are achieved. These units can be tweaked more to achieve better results.
-During model compilation, the chosen loss function is mean squared error since we want to know how far the model is diverging from the actual values we want to predict. We also chose to monitor the mean absolute error in the metrics, for a similar reason as with the mean squared error.
+The number of units in the first two layers has been chosen out of try and error, the stop condition being until when satisfying results are achieved. The last layer has only one unit since we expect the network to predict a single value. These units in the first two layers can be tweaked more to achieve better results.
+
+During model compilation, the chosen loss function is mean squared error(MSE) since we want to minimize the difference between the model prediction and the actual expected values. We also chose to monitor the mean absolute error in the metrics, to see how much the model prediction diverges from the expected values.
 
 After building the model, we go ahead to fit the training data onto the built model. 
 {% highlight python linenos %}
@@ -155,7 +156,7 @@ Let us go ahead to generate new data values in an unseen range so as to see how 
 #
 # application of the trained model, predicting values
 #
-x_new = np.random.uniform(201,500,(50,1)) # generate random Fahrenheit values between 1 and 100
+x_new = np.random.uniform(201,500,(50,1)) # generate random Fahrenheit values between 201 and 500
 y_new = np.array([(fahrenheit - 32)*(5/9) for fahrenheit in x_new]) # calculate corresponding Centigrade values
 
 y_new_predicted = model.predict(x_new)
