@@ -3,7 +3,7 @@ layout: post
 title: Get the feel - Building a dumy AI model that predicts temperature in Centigrade given temperature in Fahrenheit
 subtitle: Learning the temperature conversion formular from data values
 cover-img: /assets/img/path.jpg
-thumbnail-img: /assets/img/thumb.png
+thumbnail-img: /assets/img/temp-conv-dumy-ai-model/thumb.png
 share-img: /assets/img/path.jpg
 gh-repo: simonandro/predict-centigrade-given-fahrenheit
 tags: [AI model, model training, keras, machine learning, deep learning, temparature conversion]
@@ -125,7 +125,7 @@ plt.legend()
 plt.show()   
 {% endhighlight %}
 
-![Model Training visualization](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg){: .mx-auto.d-block :}
+![Model Training visualization](https://raw.githubusercontent.com/SimonAndro/predict-centigrade-given-fahrenheit/main/20epochs_training.png){: .mx-auto.d-block :}
 
 
 We also go ahead to evaluate the model on the test data set, the results obtained are shown below:
@@ -137,17 +137,17 @@ eval_mse, eval_mae = model.evaluate(x_test, y_test, verbose=1)
 print("MSE=%s, MAE=%s" % (eval_mse, eval_mae))
 {% endhighlight %}
 ```
-[MSE=2506.014892578125, MAE=48.59580612182617]
+[MSE=53.75002670288086, MAE=6.751595497131348]
 ```
 
-The Results from the training process show that the model has learnt to fit the input values to the output values by around the 10th epoch. Further training maintains the loss and the mean absoulte error values almost constant. By this point, we shall make a decision of stopping the training at the 10th epoch so as to improve the model generalization on unseen data. 
-The results of the evaulation, taking MAE as the bench mark, imply that we are off by almost 50 degrees centigrade which is quite large in actual sense.
+The Results from the training process show that the model has learnt to fit the input values to the output values by around the 10th epoch. Further training maintains the loss and the mean absoulte error values almost constant. At this point, we shall make a decision of stopping the training at the 10th epoch so as to improve the model generalization on unseen data. 
+The results of the evaulation, taking MAE as the bench mark, imply that we are off by almost 7 degrees centigrade which is quite large in actual sense.
 
 Training the model again with an epoch count of 10, the new results from the model evalaution are shown below:
 ```
-[MSE=2506.014892578125, MAE=48.59580612182617]
+[MSE=18.294105529785156, MAE=4.252650260925293]
 ```
-This above results show that the model has improved abit from the first MAE.
+This above results show that the model has improved abit from the first MAE by about 2.5 degrees centigrade.
 
 Let us go ahead to generate new data values in an unseen range so as to see how well the model performs on unseen data.
 {% highlight python linenos %}
@@ -170,7 +170,7 @@ plt.show()
 
 The results of the plot of predicted values and the expected values are shown below:
 
-![Model Training visualization](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg){: .mx-auto.d-block :}
+![Model Training visualization](https://raw.githubusercontent.com/SimonAndro/predict-centigrade-given-fahrenheit/main/mae_4_predicted_actual.png){: .mx-auto.d-block :}
 
 The results in the plot above show that the model has been able to learn the temperature conversion formular to some extent, the model is able to predict centigrade values with an average absolute error of about 45 degrees centigrade.
 
