@@ -18,7 +18,7 @@ tags: [AI model, model training, keras, machine learning, deep learning, tempara
   To Show how a model can be built and evaluated using the keras framework
 
 ### Background
-  The temperature conversion formular form Degrees Fahrenheit to Degrees Centigrade is given below in python:
+  The temperature conversion formular from Degrees Fahrenheit to Degrees Centigrade is given below in python:
 
   ```
   centigrade = (fahrenheit - 32)*(5/9)
