@@ -6,6 +6,7 @@ cover-img: /assets/img/path.jpg
 thumbnail-img: /assets/img/temp-conv-dummy-ai-model/thumb.png
 share-img: /assets/img/path.jpg
 gh-repo: simonandro/predict-centigrade-given-fahrenheit
+gh-badge: [star, fork, follow]
 tags: [AI model, model training, keras, machine learning, deep learning, temparature conversion]
 ---
 
