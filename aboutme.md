@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About me
-subtitle: Adventures in Tech: Unveiling Tomorrow's Possibilities
+subtitle: Adventures in Tech: Unveiling Tomorrow's Possibilities.
 ---
 
 Welcome to my corner of the tech universe! If you're searching for a refreshing blend of intellect, curiosity, and a sprinkle of charm, you've come to the right place. I'm Nakibinge Simon, and here's why you'll want to connect with me:
