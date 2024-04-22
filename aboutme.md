@@ -1,6 +1,6 @@
 ---
 layout: page
-title: aboutme
+title: About Me
 subtitle: Adventures in Tech: Unveiling Tomorrow's Possibilities.
 ---
 
